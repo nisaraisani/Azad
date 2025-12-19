@@ -1,72 +1,42 @@
+:root {
+  --bg:#f4f4f4; --text:#000; --card:#fff;
+}
+.dark {
+  --bg:#121212; --text:#fff; --card:#1e1e1e;
+}
 body {
-    margin: 0;
-    font-family: "Noto Nastaliq Urdu", Arial, sans-serif;
-    background: #f3f3f3;
-    direction: rtl;
+  margin:0; font-family:Arial;
+  background:var(--bg); color:var(--text);
+  direction:rtl;
 }
-
 header {
-    background: #0b3d2e;
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background:#0b3d2e; color:#fff;
+  padding:15px; display:flex;
+  justify-content:space-between;
 }
-
-header span {
-    color: #ffd700;
-}
-
-nav a {
-    color: white;
-    margin-right: 15px;
-    text-decoration: none;
-    font-size: 14px;
-}
-
+header span {color:gold;}
+.link {color:white; text-decoration:none; margin-right:10px;}
 .breaking {
-    background: #b30000;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
+  background:darkred; color:white;
+  padding:10px; text-align:center;
 }
-
-main {
-    padding: 20px;
+#newsContainer {
+  padding:15px; display:grid;
+  grid-template-columns:1fr; gap:15px;
 }
-
-.news {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-right: 5px solid #0b3d2e;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 15px;
-}
-
 .card {
-    background: white;
-    padding: 20px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 5px;
+  background:var(--card); padding:15px;
+  border-radius:10px;
 }
-
-.card:hover {
-    background: #0b3d2e;
-    color: white;
+.admin {padding:20px;}
+.admin input, .admin textarea {
+  width:100%; padding:10px; margin-bottom:10px;
 }
-
+button {padding:8px 12px; cursor:pointer;}
 footer {
-    background: #0b3d2e;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    margin-top: 20px;
+  background:#0b3d2e; color:white;
+  text-align:center; padding:10px;
+}
+@media(min-width:600px){
+  #newsContainer{grid-template-columns:repeat(2,1fr);}
 }
