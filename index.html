@@ -1,49 +1,32 @@
 <!DOCTYPE html>
 <html lang="ur" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>آزاد بلوچستان</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>آزاد بلوچستان</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
 <header>
-    <h1>آزاد <span>بلوچستان</span></h1>
-    <nav>
-        <a href="#">صفحۂ اول</a>
-        <a href="#">قومی خبریں</a>
-        <a href="#">سیاست</a>
-        <a href="#">کھیل</a>
-        <a href="#">ٹیکنالوجی</a>
-    </nav>
+  <h1>آزاد <span>بلوچستان</span></h1>
+  <div>
+    <button id="darkToggle">🌙</button>
+    <a href="login.html" class="link">لاگ اِن</a>
+  </div>
 </header>
 
 <section class="breaking">
-    <p id="breakingText">تازہ ترین خبریں یہاں دکھائی جائیں گی</p>
+  <p id="breakingText">خبریں لوڈ ہو رہی ہیں...</p>
 </section>
 
-<main>
-    <article class="news">
-        <h2>اہم خبر</h2>
-        <p>
-            آزاد بلوچستان ایک جدید اردو نیوز ویب سائٹ کا سادہ اور
-            GitHub Pages کے لیے مکمل طور پر موزوں ڈیزائن ہے۔
-        </p>
-    </article>
-
-    <section class="grid">
-        <div class="card">بلوچستان کی خبریں</div>
-        <div class="card">پاکستان</div>
-        <div class="card">دنیا</div>
-        <div class="card">کھیل</div>
-        <div class="card">ٹیکنالوجی</div>
-    </section>
-</main>
+<main id="newsContainer"></main>
 
 <footer>
-    <p>© 2025 آزاد بلوچستان | تمام حقوق محفوظ ہیں</p>
+  <p>© 2025 آزاد بلوچستان</p>
 </footer>
 
+<script src="firebase.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
