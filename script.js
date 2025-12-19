@@ -1,20 +1,42 @@
-const toggle=document.getElementById("darkToggle");
-if(toggle){
-  toggle.onclick=()=>document.body.classList.toggle("dark");
+// 🌙 Dark Mode
+const toggle = document.getElementById("darkToggle");
+if (toggle) {
+  toggle.onclick = () => document.body.classList.toggle("dark");
 }
 
-const API_KEY="YOUR_NEWSAPI_KEY";
-fetch(`https://newsapi.org/v2/top-headlines?country=pk&apiKey=${API_KEY}`)
-.then(r=>r.json())
-.then(d=>{
-  const c=document.getElementById("newsContainer");
-  const b=document.getElementById("breakingText");
-  if(!d.articles)return;
-  b.textContent=d.articles[0].title;
-  d.articles.slice(0,6).forEach(a=>{
-    const div=document.createElement("div");
-    div.className="card";
-    div.innerHTML=`<h3>${a.title}</h3><p>${a.description||""}</p>`;
-    c.appendChild(div);
-  });
+// 📰 Static Urdu News (GitHub Safe)
+const newsData = [
+  {
+    title: "بلوچستان میں ترقیاتی منصوبوں کا اعلان",
+    desc: "حکومت نے بلوچستان میں نئے ترقیاتی منصوبوں کا اعلان کر دیا ہے۔"
+  },
+  {
+    title: "سیاسی صورتحال پر اہم اجلاس",
+    desc: "ملکی سیاسی صورتحال پر اعلیٰ سطحی اجلاس منعقد ہوا۔"
+  },
+  {
+    title: "کھیلوں کی دنیا کی تازہ خبریں",
+    desc: "قومی ٹیم نے شاندار کارکردگی کا مظاہرہ کیا۔"
+  },
+  {
+    title: "ٹیکنالوجی میں نئی جدت",
+    desc: "مصنوعی ذہانت کے نئے ٹولز متعارف کرا دیے گئے۔"
+  }
+];
+
+const container = document.getElementById("newsContainer");
+const breaking = document.getElementById("breakingText");
+
+// Breaking News
+breaking.textContent = newsData[0].title;
+
+// Show News Cards
+newsData.forEach(news => {
+  const div = document.createElement("div");
+  div.className = "card";
+  div.innerHTML = `
+    <h3>${news.title}</h3>
+    <p>${news.desc}</p>
+  `;
+  container.appendChild(div);
 });
