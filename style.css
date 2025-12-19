@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: 'Noto Nastaliq Urdu', serif;
+  background-color: #f4f4f4;
+  color: #111;
+}
+
+/* Header */
+.site-header {
+  background: #0f3d2e;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.site-header p {
+  margin-top: 6px;
+  font-size: 16px;
+}
+
+/* Navigation */
+.navbar {
+  background: #222;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 16px;
+  font-size: 15px;
+}
+
+.navbar a:hover {
+  background: #0f3d2e;
+}
+
+/* Main container */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+/* News card */
+.news-card {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.news-card h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.meta {
+  font-size: 13px;
+  color: #666666;
+}
+
+/* Read more link */
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0f3d2e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+  background: #222;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
